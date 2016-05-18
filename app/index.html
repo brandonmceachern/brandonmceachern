@@ -102,21 +102,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar" class="tall">
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-
           <span class="space"></span>
 
           <!-- Toolbar icons -->
-
+          <login-dialog user="{{user}}"></login-dialog>
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <iron-image sizing="cover" src="./images/touch/icon-72x72.png"></iron-image>
             <div class="app-name">Brandon McEachern</div>
+
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">Web applications for a more productive organization.</div>
           </div>
         </paper-toolbar>
 
@@ -125,6 +124,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home">
               <paper-material elevation="1">
+                <h1>user: {{user.uid}}</h1>
                 <my-greeting></my-greeting>
               </paper-material>
             </section>
